@@ -1,5 +1,4 @@
 // ==== Define game variables ====
-
 let 
 min=1,
 max=10, 
@@ -13,6 +12,7 @@ let game = document.querySelector('#game');
 let guessInput = document.querySelector('#guss-input');
 let submitBtn = document.querySelector('#submit-Btn');
 let message = document.querySelector('.massage');
+let playAgain = document.querySelector('.play-again');
 
 // add min and max num to the DOM
 minNum.textContent=min;
@@ -67,15 +67,22 @@ function checkGuess(guess){
     }
 }
 
-// Game over and play Again function
-
+// Game over function
 function gameOver(msg,color){
     showMassage(msg,color);
     submitBtn.value="play again";
     submitBtn.style.border= `1px solid ${color}`;
+    submitBtn.classList='play-again';
     guessInput.disabled=true;
     guessInput.value="";
+    //submitBtn.disabled=true;
 }
 
-
-console.log(winNumber);
+//  play Again function 
+game.addEventListener('mousedown' , (e)=>{
+    
+    if(e.target.classList.contains("play-again")){
+        window.location.reload();
+    }
+    
+})
