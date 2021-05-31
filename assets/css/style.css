@@ -1,1 +1,54 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, right top, from(#83a4d4), to(#b6fbff));
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+}
+
+.contain {
+  margin-top: 10rem;
+  border: 1px solid #3365a7;
+  border-radius: 15px;
+  padding: 10rem;
+  background-color: rgba(134, 168, 231, 0.3);
+  -webkit-box-shadow: 5px 5px 25px #2f8392, -5px -5px 25px #7b7fd4;
+          box-shadow: 5px 5px 25px #2f8392, -5px -5px 25px #7b7fd4;
+  color: #616161;
+}
+
+.contain #guss-input {
+  border: 1.4px solid royalblue;
+  -webkit-box-shadow: -1px -1px 10px #377f91, 1px 1px 10px #3f8ca0;
+          box-shadow: -1px -1px 10px #377f91, 1px 1px 10px #3f8ca0;
+}
+
+.contain #guss-input:focus {
+  -webkit-box-shadow: -1px -1px 10px #377f91, 1px 1px 10px #3f8ca0;
+          box-shadow: -1px -1px 10px #377f91, 1px 1px 10px #3f8ca0;
+  border: 1.5px solid #153eb9;
+}
+
+.contain #submit-Btn {
+  border: 1.4px solid royalblue;
+  -webkit-box-shadow: -1px -1px 10px #377f91, 1px 1px 10px #3f8ca0;
+          box-shadow: -1px -1px 10px #377f91, 1px 1px 10px #3f8ca0;
+}
+
+.contain #submit-Btn:hover {
+  -webkit-box-shadow: -1px -1px 10px #377f91, 1px 1px 10px #3f8ca0;
+          box-shadow: -1px -1px 10px #377f91, 1px 1px 10px #3f8ca0;
+  border: 1.5px solid #153eb9;
+}
+/*# sourceMappingURL=style.css.map */
