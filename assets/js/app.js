@@ -34,6 +34,7 @@ submitBtn.addEventListener('click',()=>{
         showMassage(`please Enter a number between min and max` , `darkred`);
        }else{
            //true value
+           guessLeft--;
            checkGuess(guess);
        }
     }
@@ -48,14 +49,33 @@ function showMassage(msg,color){
     guessInput.value="";
 }
 
-// check true or false Guess
+// check true or false Guess and game over
 function checkGuess(guess){
 
     if(guess==winNumber){
-        
+        // true guess
+        gameOver(`${guess} is true . You are win .` , `green`);
     }else{
-        showMassage(`${guess} is false . ${guessLeft} remaning . try again ... ` , `red`);
-        guessInput.value="";
+        // Check out the guess
+        if(guessLeft<1){
+            gameOver(`${winNumber} is true . You are not win . game over!!` , `red`);
+        }else{
+            // false guess
+            showMassage(`${guess} is false . ${guessLeft} remaning . try again ... ` , `blue`);
+            
+        }
     }
 }
+
+// Game over and play Again function
+
+function gameOver(msg,color){
+    showMassage(msg,color);
+    submitBtn.value="play again";
+    submitBtn.style.border= `1px solid ${color}`;
+    guessInput.disabled=true;
+    guessInput.value="";
+}
+
+
 console.log(winNumber);
