@@ -25,10 +25,17 @@ submitBtn.addEventListener('click',()=>{
     let guess = Number(guessInput.value);
 
     //cheack input value full or empty
-    if(guess=="" ){
-        showMassage(`please Enter a number between min and max`,'#ffd034')
+    if(guessInput.value=="" ){
+        showMassage(`please Enter a number `,'#ffd034')
     }else{
-       
+        // ==== check true value ====
+       if(isNaN(guess) || guess>max || guess<min){
+           // false value
+        showMassage(`please Enter a number between min and max` , `darkred`);
+       }else{
+           //true value
+           checkGuess(guess);
+       }
     }
     
 })
@@ -40,3 +47,15 @@ function showMassage(msg,color){
     guessInput.style.border= `1px solid ${color}`;
     guessInput.value="";
 }
+
+// check true or false Guess
+function checkGuess(guess){
+
+    if(guess==winNumber){
+        
+    }else{
+        showMassage(`${guess} is false . ${guessLeft} remaning . try again ... ` , `red`);
+        guessInput.value="";
+    }
+}
+console.log(winNumber);
